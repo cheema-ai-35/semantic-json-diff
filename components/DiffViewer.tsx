@@ -44,18 +44,18 @@ const DiffNodeComponent = ({ node, level = 0 }: { node: DiffNode; level?: number
     return "";
   };
 
-  const getTextClass = () => {
-    switch (node.type) {
-      case "added":
-        return "text-success font-medium";
-      case "removed":
-        return "text-destructive font-medium";
-      case "modified":
-        return "text-warning font-medium";
-      default:
-        return "text-muted-foreground";
-    }
-  };
+  // const getTextClass = () => {
+  //   switch (node.type) {
+  //     case "added":
+  //       return "text-success font-medium";
+  //     case "removed":
+  //       return "text-destructive font-medium";
+  //     case "modified":
+  //       return "text-warning font-medium";
+  //     default:
+  //       return "text-muted-foreground";
+  //   }
+  // };
 
   return (
     <div className="mb-1">

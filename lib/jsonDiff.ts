@@ -16,21 +16,21 @@ export interface DiffNode {
 /**
  * Deep clone helper
  */
-function deepClone(obj: any): any {
-  if (obj === null || typeof obj !== "object") return obj;
-  if (obj instanceof Date) return new Date(obj);
-  if (obj instanceof Array) return obj.map((item) => deepClone(item));
-  if (typeof obj === "object") {
-    const clonedObj: any = {};
-    for (const key in obj) {
-      if (obj.hasOwnProperty(key)) {
-        clonedObj[key] = deepClone(obj[key]);
-      }
-    }
-    return clonedObj;
-  }
-  return obj;
-}
+// function deepClone(obj: any): any {
+//   if (obj === null || typeof obj !== "object") return obj;
+//   if (obj instanceof Date) return new Date(obj);
+//   if (obj instanceof Array) return obj.map((item) => deepClone(item));
+//   if (typeof obj === "object") {
+//     const clonedObj: any = {};
+//     for (const key in obj) {
+//       if (obj.hasOwnProperty(key)) {
+//         clonedObj[key] = deepClone(obj[key]);
+//       }
+//     }
+//     return clonedObj;
+//   }
+//   return obj;
+// }
 
 /**
  * Check if two values are deeply equal
