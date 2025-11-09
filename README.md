@@ -1,36 +1,94 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 🧩 JSON Diff Visualizer — Side-by-Side JSON Comparison
 
-## Getting Started
+A **Next.js** web application that intelligently visualizes the differences between two JSON objects — side by side, beautifully and clearly.
 
-First, run the development server:
+This tool highlights exactly what changed, what was added, and what was removed between two JSON inputs.
+It’s built for developers, analysts, and anyone who needs to quickly understand complex JSON differences at a glance.
+
+---
+
+## ✨ Features
+
+* 🔍 **Smart JSON Diffing** — Detects nested changes, additions, and deletions.
+* 🧠 **Intelligent Highlighting** — Color-coded visualization for added, removed, or modified keys/values.
+* 🎨 **Clean UI/UX** — Minimalist design that focuses on readability and clarity.
+* ⚡ **Fast & Interactive** — Built with [Next.js](https://nextjs.org/) and React for instant feedback.
+* 🪶 **Lightweight** — No backend required; everything runs in the browser.
+
+---
+
+## 🚀 Getting Started
+
+### 1. Clone the repository
+
+```bash
+git clone https://github.com/AbdullahCheema35/semantic-json-diff.git
+cd semantic-json-diff
+```
+
+### 2. Install dependencies
+
+```bash
+npm install
+# or
+yarn install
+```
+
+### 3. Run the development server
 
 ```bash
 npm run dev
 # or
 yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Then open **[http://localhost:3000](http://localhost:3000)** in your browser.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+---
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## 🧠 How It Works
 
-## Learn More
+1. Paste or upload two JSON objects — **Left (Base)** and **Right (Changed)**.
+2. The app parses both objects and recursively compares their structure and values.
+3. It intelligently categorizes differences:
 
-To learn more about Next.js, take a look at the following resources:
+   * 🟩 **Added** — Exists in Right but not in Left
+   * 🟥 **Removed** — Exists in Left but not in Right
+   * 🟨 **Modified** — Key exists in both but value differs
+4. Results are rendered side-by-side with syntax highlighting and smooth transitions.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+---
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## 🧩 Tech Stack
 
-## Deploy on Vercel
+* **Framework:** [Next.js](https://nextjs.org/)
+* **Language:** TypeScript / JavaScript (depending on your setup)
+* **Styling:** Tailwind CSS / CSS Modules (optional — customize as needed)
+* **Diff Engine:** Custom diff logic or library integration (e.g., `jsondiffpatch`, `deep-diff`)
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+---
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## 🧰 Possible Enhancements
+
+* 🗂️ Support for large JSON files with streaming diffs
+* 🌙 Dark mode
+* 📤 Export diffs as JSON or Markdown reports
+* 🔗 Shareable diff URLs
+
+---
+
+## 📜 License
+
+MIT © [Your Name]
+Feel free to use, modify, and share.
+
+---
+
+## ❤️ Contributing
+
+Contributions are welcome!
+If you’d like to improve the diffing logic, UI, or add new features, please fork the repo and open a pull request.
+
+---
+
+Would you like me to **customize this README** (e.g., add badges, live demo link, screenshots, or instructions for deploying to Vercel)?
